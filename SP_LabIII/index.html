@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>LabIII Sdo Parcial</title>
+
+        <link rel="stylesheet" type="text/css" href="./css/jsonEstilos.css">
+        <script src="./Vehiculo.js"></script>
+        <script src="./auto.js"></script>
+        <script src="./camioneta.js"></script>
+        <script src="./FuncionesHtnl.js"></script>
+    </head>
+    <body>
+        <!-- Formulario 1 para alta de auto-->
+        <div id="contFormulario1" class="contenedor" hidden> <!-- hidden -->
+            <div class="bCerrar contenedor1" >
+                <div class="tituloH2" >
+                    <h2>ALTA DE AUTO</h2>
+                </div>
+                <div>
+                    <button id="btnCerrarFormulario1" class="cerrar">x</button>
+                </div>
+            </div>
+            <br>
+            <table>
+                <tr>
+                    <td><label for="IdAuto">Id</label></td>
+                    <td><input type="text" id="IdAuto" class="sinError" name="IdAuto" placeholder="Id" disabled></input></td>
+                </tr>
+                <tr>
+                    <td><label for="marca">Marca</label></td>
+                    <td><input type="text" id="marca" class="sinError" name="marca" placeholder="Marca"></input></td>
+                </tr>
+                <tr>
+                    <td><label for="modelo">Modelo</label></td>
+                    <td><input type="text" id="modelo" class="sinError" name="modelo" placeholder="Modelo"></input></td>
+                </tr>
+                <tr>
+                    <td><label for="precio">Precio</label></td>
+                    <td> <input type="number" id="precio" class="sinError" name="precio" placeholder="Precio"></input></td>
+                </tr>
+                <tr>
+                    <td> <label for="cantidadPuerta">Cantidad de Puertas</label></td>                
+                    <td> <input type="number" id="cantidadPuerta" class="sinError" name="cantidadPuerta" placeholder="Cantidad de Puertas"></input></td>
+                </tr>
+            </table>
+            <div id="contenedor2">
+                <button id="btnGuardarFormulario1">Guardar</button>
+                <button id="limpiarFormulario1">Limpiar</button>
+            </div>   
+        </div> 
+        <!--Fin contenedor Formulario 1 -->
+
+        <!-- Formulario 2 para alta de camioneta -->
+        <div id="contFormulario2" class="contenedor" hidden> <!-- hidden -->
+            <div class="bCerrar contenedor1" >
+                <div class="tituloH2" >
+                    <h2>ALTA DE CAMIONETA</h2>
+                </div>
+                <div>
+                    <button id="btnCerrarFormulario2" class="cerrar">x</button>
+                </div>
+            </div>
+            <br>
+            <table>
+                <tr>
+                    <td><label for="IdCamioneta">Id</label></td>
+                    <td><input type="text" id="IdCamioneta" class="sinError" name="IdCamioneta" placeholder="Id" disabled></input></td>
+                </tr>
+                <tr>
+                    <td><label for="marcaCamioneta">Marca</label></td>
+                    <td><input type="text" id="marcaCamioneta" class="sinError" name="marcaCamioneta" placeholder="Marca"></input></td>
+                </tr>
+                <tr>
+                    <td><label for="modeloCamioneta">Modelo</label></td>
+                    <td><input type="text" id="modeloCamioneta" class="sinError" name="modeloCamioneta" placeholder="Modelo"></input></td>
+                </tr>
+                <tr>
+                    <td><label for="precioCamioneta">Precio</label></td>
+                    <td><input type="number" id="precioCamioneta" class="sinError" name="precioCamioneta" placeholder="Precio"></input></td>
+                </tr>
+                <tr>
+                    <td><label for="tipo">Cuatro x Cuatro</label></td>
+                    <td><select id="tipo" name="tipo" >
+                        <option value="SI">SI</option>
+                        <option value="NO">NO</option>
+                    </select></td>
+                </tr>
+            </table>
+            <div id="contenedor2">
+                <button id="btnGuardarFormulario2">Guardar</button>
+                <button id="limpiarFormulario2">Limpiar</button>
+            </div>   
+        </div> 
+        <!--Fin contenedor Fromulario 2 -->
+
+        
+        <!-- Pagina Principal -->
+        <div class="row space-between flex-start">
+            <header>
+                
+                <!--Solapa superior-->
+                <div class="tituloH2" >
+                    <div id="encabezado"> 
+                        <h2>ELIJA UNA OPCION</h2>
+                    </div>
+
+                    <div class="containerHeader">
+
+                        <button id="btnAbrirFormulario1" class="flex1">Agregar Auto</button>
+                        <button id="btnAbrirFormulario2" class="flex1">Agregar Camioneta</button>
+
+                        <div>
+                            <input type="text" size="15" id="promedio" class="flex1" placeholder="Precio promedio">
+                        </div>
+                        <button id="btnPromedio" class="flex1">Promedio</button>
+                        <button id="btnPromedioSalir" class="flex1">Limpiar Promedio</button>
+
+                        <div id="btnTecla">
+                            <input type="text" size="40" id="tecla" class="flex1" placeholder="Busqueda por marca">
+                        </div>
+
+                        <button id="btnSalirBusqueda" class="flex1">Exit Busqueda</button>
+                    </div>    
+                </div>
+            </header>
+        </div>
+
+        <div id="contenedorPrincipalTabla" >
+            <h3 class="tituloH2">LISTA DE VEHICULOS</h3>
+            
+            <div class="contenedorTabla">
+                <label><h4> SELECCIONE EL CAMPO -> .</h4></label>
+                <label for="idCheck">  Id</label>                  
+                <input type="checkbox" id="idCheck" name="id" checked>
+
+                <label for="marcarCheck">.     Marca</label>       
+                <input type="checkbox" id="marcaCheck" name="marca" checked>
+
+                <label for="modeloCheck">.     Modelo</label>    
+                <input type="checkbox" id="modeloCheck" name="modelo" checked>
+
+                <label for="precioCheck">.     Precio</label>      
+                <input type="checkbox" id="precioCheck" name="precio" checked>
+            </div>
+
+            <div class="contenedorTabla" id = "TablaContenedor" >
+                <table class ="contenedorTablaHijo">
+                    <thead>
+                        <tr>
+                            <th name="idTabla">ID</th>
+                            <th name="marcaTabla">MARCA</th>
+                            <th name="modeloTabla">MODELO</th>
+                            <th name="precioTabla">PRECIO</th>
+                            <th>ACCION</th>
+                        </tr>
+                    </thead>    
+                    <tbody id="cuerpo"> </tbody>
+                </table>
+            </div>
+        </div> 
+        
+        <div id = "ContenedorTablaBusqueda" hidden>
+            <h3 class="tituloH2">Resultado Busqueda</h3>
+            <div class="padre" id = "TablaBusqueda" >
+                <table id="grillaBusqueda" class="hijo">
+                    <thead>
+                        <tr>
+                            <th class="colorBusqueda">ID</th>
+                            <th class="colorBusqueda">MARCA</th>
+                            <th class="colorBusqueda">MODELO</th>
+                            <th class="colorBusqueda">PRECIO</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoBusqueda"></tbody>             
+                </table> 
+            </div> 
+        </div> 
+
+    </body>
+</html> 

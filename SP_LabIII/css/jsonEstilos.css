@@ -1,0 +1,309 @@
+.contenedor{
+    width: 50%;
+    border: none; 
+    position: fixed;
+    bottom: 30%;
+    right: 30%;
+    border-radius: 6%;
+    animation-name: aparecer;
+    animation-duration: 4s;
+    background-color: rgb(229, 231, 220);
+    padding: 20px;
+    box-shadow: 10px 10px 5px 0px rgb(160, 170, 180);
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+#encabezado{ 
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+.bCerrar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.cerrar{
+    background-color: red;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=text],input[type=number],input[type=date]{
+    width: 100%;
+    padding: 2px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    
+    border-radius: 4px;
+    box-sizing: border-box; /*Hace crecer el componente para que no se rompa*/
+}
+
+.inputBuscador{
+    width: 10%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=button]{
+    width: 30%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8 0;
+    border: none;
+    cursor: pointer;
+}
+
+input[type = button]:hover{
+    background-color: salmon;
+}
+#btnElininar{
+    background-color: #e62c14;
+}
+input[type=reset]{
+    width: 30%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 0 0;
+    border: none;
+    cursor: pointer;
+}
+
+input[type = reset]:hover{
+    background-color: salmon;
+}
+
+
+#btnGuardarFormulario1,#btnGuardarFormulario2{
+    width: 30%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8 0;
+    border: none;
+    cursor: pointer;
+}
+
+#limpiarFormulario1,#limpiarFormulario2{
+    width: 30%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8 0;
+    border: none;
+    cursor: pointer;
+}
+.sinError{
+    border: 1px solid #cccccc;
+}
+
+.error{
+    border: 1px solid red;
+}
+
+.contenedor1 {
+    display: flex;
+    background-color: #ddd;
+    height: 10vh;
+    top: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#contenedor2 {
+    display: flex;
+    background-color: rgb(170, 216, 170);
+    height: 10vh;
+    top: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+*,*:after, *:before{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#contenedor_carga{
+    background-color: rgba(250,240,2450,0.9);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 10000;
+}
+
+#carga{
+    border: 15px solid #ccc;
+    border-top-color: #F4266A;
+    border-top-style: groove;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation: girar 1.5s linear infinite;
+    animation: girar 1.5s linear infinite;
+}
+
+@keyframes girar{
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+}
+.contenedorTabla{
+    /*position: relative;*/
+    background: rgba(20, 8, 6, 0.199);
+    height: 100%;
+    width: 85%;
+    margin: auto;
+    /*IMPORTANTE*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedorTablaHijo{
+    /*background: lista agr*/
+    background: rgb(235, 233, 139);
+    width: 100%;
+    height: 98%;
+    border-collapse: collapse;
+}
+
+.tituloH2{
+    flex: initial;
+    align-items: left;
+    margin: auto;
+    /*border: 3px solid yellow;*/
+    width: 1300px;
+    min-width: 100px;
+}
+
+/* tabla alta*/
+
+tr:nth-child(even){
+    background-color: #dee9aa;
+    color: rgb(27, 25, 25);
+}
+
+th{
+    background-color: rgb(17, 16, 14);
+    color: rgb(164, 240, 88);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #000;
+ }
+ th, td {
+    width: 25%;
+    text-align: center;
+    padding: 8px;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-collapse: collapse;
+ }
+ td{
+    cursor: pointer;
+ }
+
+ .colorBusqueda{
+     background-color: #55e46d;
+     color: #f1f3f5;
+ }
+ 
+ /* Fin tabla*/
+
+ /*Tabla busqueda*/
+ .padre {
+    background: rgba(20, 8, 6, 0.199);
+    height: 100%;
+    width: 85%;
+    margin: auto;
+    /*IMPORTANTE*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hijo {
+    /*background: rgb(82, 138, 155);*/
+    background: rgb(104, 199, 223);
+    width: 80%;
+    height: 98%;
+  }
+  .row{
+    flex-direction: row;
+}
+
+.flex-start{
+    justify-content: flex-start;
+}
+
+.flex-end{
+    justify-content: flex-end;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.space-around{
+    justify-content: space-around;
+}
+
+/*Solapa*/
+.containerHeader {
+    background-color: #59e0da;
+    width: 98%;
+    /*border: 3px solid green;*/
+    display: flex;
+    }
+.initial {
+    flex: initial;
+    border: 1px solid rgb(17, 16, 16);
+    width: 200px;
+    min-width: 100px;
+    background-color: #e9eb8e;
+    color: white;
+}
+.initialBuscar{
+    background-color: #82dff0;
+    color: white;
+    padding: 9px;
+}
+.flex1 {
+    flex: 1;
+}
